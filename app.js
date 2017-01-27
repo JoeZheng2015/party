@@ -1,0 +1,5 @@
+App({
+    getName() {
+        return 'joe'
+    }
+})

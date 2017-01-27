@@ -1,0 +1,13 @@
+<view class="Parties">
+    <view wx:key wx:for="{{parties}}" class="Parties__item">
+        <image class="Parties__avatar"></image>
+        <view class="Parties__info">
+            <view class="Parties__header">
+                <view class="Parties__title">{{item.title}}</view>
+                <view class="Parties__time">{{item.time}}</view>
+            </view>
+            <view class="Parties__location">{{item.location}}</view>
+        </view>
+    </view>
+    <navigator class="Parties__button" url="/pages/edit/edit">+</navigator>
+</view>

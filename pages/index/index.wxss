@@ -1,0 +1,55 @@
+.Parties {
+    padding: 0 20rpx;
+}
+
+.Parties__item {
+    padding: 20rpx 0;
+    border-top: 1rpx solid #d8d8d8;
+    border-bottom: 1rpx solid #d8d8d8;
+    display: flex;
+}
+
+.Parties__avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+}
+
+.Parties__info {
+    flex: 1;
+    padding-left: 22rpx;
+}
+
+.Parties__header {
+    font-size: 32rpx;
+    line-height: 56rpx;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Parties__location {
+    font-size: 28rpx;
+    line-height: 44rpx;
+    color: #999;
+}
+
+.Parties__time {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.Parties__button {
+    height: 96rpx;
+    line-height: 96rpx;
+    width: 96rpx;
+    border-radius: 100%;
+    font-size: 96rpx;
+    background-color: #6b8ee1;
+    color: #665c00;
+    position: fixed;
+    bottom: 30rpx;
+    left: 50%;
+    margin-left: -48rpx;
+    text-align: center;
+}

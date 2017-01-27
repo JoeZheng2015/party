@@ -1,0 +1,11 @@
+<form bindsubmit="formSubmit" class="Edit">
+    <input class="Edit__input" name="title" type="text" placeholder="标题" />
+    <input class="Edit__input" name="location" type="text" placeholder="地点" />
+    <picker class="Edit__picker" mode="date" value="{{year}}-{{month}}-{{day}}" start="{{year}}-{{month}}-{{day}}" end="{{year + 1}}-{{month}}-{{day}}" bindchange="bindDateChange">
+        <view class="Edit__pickerText">日期: {{year}}-{{month}}-{{day}}</view>
+    </picker>
+    <picker class="Edit__picker" mode="time" value="{{hour}}:{{minute}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+        <view class="Edit__pickerText">时间: {{hour}}:{{minute}}</view>
+    </picker>
+    <button class="Edit__button" formType="submit">确定</button>
+</form>
