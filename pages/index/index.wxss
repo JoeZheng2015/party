@@ -2,9 +2,12 @@
     padding: 0 20rpx;
 }
 
+.Parties__items {
+    border-top: 1rpx solid #d8d8d8;
+}
+
 .Parties__item {
     padding: 20rpx 0;
-    border-top: 1rpx solid #d8d8d8;
     border-bottom: 1rpx solid #d8d8d8;
     display: flex;
 }
@@ -44,12 +47,27 @@
     line-height: 96rpx;
     width: 96rpx;
     border-radius: 100%;
-    font-size: 96rpx;
-    background-color: #6b8ee1;
-    color: #665c00;
     position: fixed;
     bottom: 30rpx;
     left: 50%;
     margin-left: -48rpx;
-    text-align: center;
+}
+
+.Parties__clear {
+    height: 96rpx;
+    width: 96rpx;
+    transform: rotate(45deg);
+    background-color: #1AAD19;
+    border-radius: 100%;
+}
+
+.Parties__button:after {
+    content: "";
+    background: url('../../images/plus.png') no-repeat center center;
+    width: 66rpx;
+    height: 66rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

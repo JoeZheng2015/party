@@ -1,0 +1,72 @@
+.Detail {
+    padding-bottom: 9·0rpx;
+}
+
+.Detail__panel {
+    padding: 0 20rpx;
+    border-bottom: 1rpx solid #d8d8d8;
+}
+
+.Detail__title {
+    padding: 65rpx 0 25rpx;
+    font-size: 56rpx;
+    line-height: 68rpx;
+    font-weight: bold;
+}
+
+.Detail__time,
+.Detail__location,
+.Detail__amount {
+    font-size: 30rpx;
+    line-height: 40rpx;
+    padding-bottom: 20rpx;
+}
+
+.Detail__player {
+    display: flex;
+    padding: 19rpx 20rpx;
+    border-bottom: 1rpx solid #d8d8d8;   
+}
+
+.Detail__avatar {
+    height: 72rpx;
+    width: 72rpx;
+}
+
+.Detail__nickname {
+    flex: 1;
+    height: 72rpx;
+    line-height: 72rpx;
+    padding-left: 23rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.Detail__gender {
+    width: 28rpx;
+    height: 28rpx;
+    vertical-align:text-top;
+}
+
+/*.Detail__nickname--male:after {
+    content: "";
+    background: url('../../images/male.png') no-repeat center center;
+    height: 28rpx;
+}
+
+.Detail__nickname--female:after {
+    content: "";
+    background: url('../../images/female.png') no-repeat center center;
+}*/
+
+.Detail__join {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 0;
+}
+

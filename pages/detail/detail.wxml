@@ -1,0 +1,22 @@
+<view class="Detail">
+    <view class="Detail__panel">
+        <view class="Detail__title">{{party.title}}</view>
+        <view class="Detail__time">时间：{{party.time}}</view>
+        <view class="Detail__location">地点：{{party.location}}</view>
+        <view class="Detail__amount">已有 {{party.players.length}} 人参加</view>
+    </view>
+    <view
+        wx:key
+        wx:for="{{party.players}}"
+        class="Detail__player">
+            <image class="Detail__avatar" src="{{item.avatarUrl}}"></image>
+            <view class="Detail__nickname">
+                {{item.nickName}}
+                <image
+                    class="Detail__gender"
+                    src="{{item.gender === 1 ? '../../images/male.png' : '../../images/female.png'}}">
+                </image>
+            </view>
+    </view>
+    <button type="primary" class="Detail__join" bindtap="join">参加</button>
+</view>

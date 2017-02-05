@@ -26,9 +26,9 @@
     height: 88rpx;
     line-height: 88rpx;
     font-size: 32rpx;
-    background-color: #ebebeb;
     text-align: center;
-    color: #999;
+    color: #fff;
+    border-radius: 0;
 }
 
 .Edit__picker {
