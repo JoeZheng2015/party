@@ -8,6 +8,8 @@ const day = formatNumber(now.getDate())
 const hour = formatNumber(now.getHours())
 const minute = formatNumber(now.getMinutes())
 
+const app = getApp()
+
 Page({
     data: {
         year,
@@ -64,6 +66,7 @@ Page({
                 location,
                 time,
                 player: userInfo,
+                userId: app.globalData.userId,
             },
             method: 'POST',
             success(res) {

@@ -14,6 +14,9 @@ Page({
 
         wx.request({
             url: `${API}/parties`,
+            data: {
+                userId: app.globalData.userId,
+            },
             success(res) {
                 const parties = res.data
 

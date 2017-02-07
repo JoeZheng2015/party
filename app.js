@@ -1,6 +1,7 @@
 App({
     globalData: {
         userInfo: null,
+        userId: 9527,
     },
     onLaunch() {
         this.getUserInfo()
