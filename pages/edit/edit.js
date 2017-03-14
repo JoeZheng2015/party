@@ -1,5 +1,5 @@
-const {formatNumber} = require('../../utils/util')
-const {API} = require('../../utils/constants')
+import {formatNumber} from '../../utils/util'
+import {'../../utils/constants'} from '../../utils/constants'
 
 const now = new Date()
 const year = formatNumber(now.getFullYear())
