@@ -1,5 +1,5 @@
-const {API} = require('../../utils/constants')
-const {formatTime, formatNumber} = require('../../utils/util')
+import {API} from '../../utils/constants'
+import {formatTime, formatNumber} from '../../utils/util'
 const app = getApp()
 
 Page({
