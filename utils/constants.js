@@ -1,3 +1,1 @@
-const API = 'http://127.0.0.1:8080'
-
-exports.API = API
+export default const API = 'http://127.0.0.1:8080'

@@ -1,9 +1,9 @@
-function formatNumber(n) {
+export function formatNumber(n) {
     n = n.toString()
     return n[1] ? n : '0' + n
 }
 
-function formatTime(date) {
+export function formatTime(date) {
     const year = date.getFullYear()
     const month = date.getMonth() + 1
     const day = date.getDate()
@@ -20,11 +20,6 @@ function formatTime(date) {
         minute,
         second,
     }
-}
-
-module.exports = {
-    formatNumber,
-    formatTime,
 }
 
 
