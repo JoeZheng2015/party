@@ -2,7 +2,7 @@
     "pages":[
         "pages/index/index",
         "pages/detail/index",
-        "pages/edit/edit"
+        "pages/edit/index"
     ],
     "window":{
         "backgroundTextStyle":"light",
