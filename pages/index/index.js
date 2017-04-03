@@ -1,5 +1,7 @@
 import {API} from '../../utils/constants'
 import {formatTime} from '../../utils/util'
+import {fetchParties} from '../../actions/index'
+import {processParties} from 'helper'
 const app = getApp()
 
 Page({
@@ -7,25 +9,11 @@ Page({
         parties: [],
     },
     onLoad() {
-        const that = this
-
-        wx.request({
-            url: `${API}/parties`,
-            data: {
-                userId: app.globalData.userId,
-            },
-            success(res) {
-                const parties = res.data
-
-                that.setData({
-                    parties: parties.map(party => {
-                        const {year, month, day, hour, minute} = formatTime(new Date(party.time))
-
-                        party.time = `${year}-${month}-${day} ${hour}:${minute}`
-                        return party
-                    }),
+        fetchParties({userId: app.globalData.userId})
+            .then(parties => {
+                this.setData({
+                    parties: processParties(parties),
                 })
-            }
-        })
+            })
     },
 })
