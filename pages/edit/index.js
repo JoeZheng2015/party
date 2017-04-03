@@ -19,20 +19,6 @@ Page({
         minute,
     },
     onLoad() {
-        this.getUserInfo()
-    },
-    getUserInfo() {
-        const that = this
-
-        wx.login({
-            success() {
-                wx.getUserInfo({
-                    success(res) {
-                        that.userInfo = res.userInfo
-                    }
-                })
-            }
-        })
     },
     bindDateChange(e) {
         const value = e.detail.value
@@ -52,7 +38,6 @@ Page({
         })
     },
     formSubmit(e) {
-        const {userInfo} = this
         const value = e.detail.value
         const {title, location} = value
         const {year, month, day, hour, minute} = this.data
@@ -65,7 +50,7 @@ Page({
                 title,
                 location,
                 time,
-                player: userInfo,
+                player: app.globalData.userInfo,
                 userId: app.globalData.userId,
             },
             method: 'POST',

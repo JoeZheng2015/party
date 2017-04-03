@@ -6,9 +6,6 @@ Page({
     data: {
         parties: [],
     },
-    props: {
-        userInfo: null,
-    },
     onLoad() {
         const that = this
 
@@ -30,20 +27,5 @@ Page({
                 })
             }
         })
-
-        this.getUserInfo()
     },
-    getUserInfo() {
-        const that = this
-
-        wx.login({
-            success() {
-                wx.getUserInfo({
-                    success(res) {
-                        that.props.userInfo = res.userInfo
-                    }
-                })
-            }
-        })
-    }
 })
