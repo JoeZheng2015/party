@@ -4,6 +4,8 @@ import {API} from '../../utils/constants'
 const now = new Date()
 const year = formatNumber(now.getFullYear())
 const month = formatNumber(now.getMonth() + 1)
+import {addParty} from '../../actions/edit'
+
 const day = formatNumber(now.getDate())
 const hour = formatNumber(now.getHours())
 const minute = formatNumber(now.getMinutes())
@@ -44,22 +46,19 @@ Page({
 
         const time = +new Date(+year, month - 1, +day, +hour, +minute)
 
-        wx.request({
-            url: `${API}/parties`,
-            data: {
-                title,
-                location,
-                time,
-                player: app.globalData.userInfo,
-                userId: app.globalData.userId,
-            },
-            method: 'POST',
-            success(res) {
-                if (res.data && res.data.ret === 0) {
-                    wx.redirectTo({
-                        url: '../index/index',
-                    })
-                }
+        addParty({
+            title,
+            location,
+            time,
+            player: app.globalData.userInfo,
+            userId: app.globalData.userId,
+        })
+        .then(res => {
+            console.log(res)
+            if (res && res.ret === 0) {
+                wx.redirectTo({
+                    url: '../index/index',
+                })
             }
         })
     },
