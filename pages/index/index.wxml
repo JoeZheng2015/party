@@ -1,7 +1,7 @@
 <view class="Parties">
     <view class="Parties__items">
         <navigator
-            url="/pages/detail/detail?id={{item._id}}"
+            url="/pages/detail/index?id={{item._id}}"
             wx:key
             wx:for="{{parties}}"
             class="Parties__item">
@@ -15,5 +15,5 @@
             </view>
         </navigator>
     </view>
-    <navigator class="Parties__button main--bgcolor" url="/pages/edit/edit"></navigator>
+    <navigator class="Parties__button main--bgcolor" url="/pages/edit/index"></navigator>
 </view>
