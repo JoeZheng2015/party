@@ -1,9 +1,14 @@
+import qcloud from './libs/sdk/index'
+import config from './config'
+
 App({
     globalData: {
         userInfo: null,
         userId: 9527,
     },
     onLaunch() {
+        qcloud.setLoginUrl(config.loginUrl)
+
         this.getUserInfo()
     },
     getUserInfo() {
