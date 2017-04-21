@@ -9,17 +9,13 @@ App({
     onLaunch() {
         qcloud.setLoginUrl(config.loginUrl)
 
-        this.getUserInfo()
-    },
-    getUserInfo() {
-        const that = this
-        wx.login({
-            success() {
-                wx.getUserInfo({
-                    success(res) {
-                        that.globalData.userInfo = res.userInfo
-                    }
-                })
+        qcloud.login({
+            success: (result) => {
+                console.log('登录成功', result);
+                this.globalData.userInfo = result
+            },
+            fail(error) {
+                console.log('登录失败', error);
             }
         })
     }
