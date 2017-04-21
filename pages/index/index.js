@@ -9,7 +9,7 @@ Page({
         parties: [],
     },
     onLoad() {
-        fetchParties({userId: app.globalData.userId})
+        fetchParties()
             .then(parties => {
                 this.setData({
                     parties: processParties(parties),

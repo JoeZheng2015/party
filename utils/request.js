@@ -1,7 +1,10 @@
+import qcloud from '../libs/sdk/index'
 export const request = (method = 'GET') => (url, data = {}, options = {}) => {
+
     return new Promise((resolve, reject) => {
-        wx.request({
+        qcloud.request({
             url,
+            login: true,
             data,
             method,
             success(res) {

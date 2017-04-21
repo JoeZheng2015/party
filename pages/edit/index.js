@@ -51,7 +51,6 @@ Page({
             location,
             time,
             player: app.globalData.userInfo,
-            userId: app.globalData.userId,
         })
         .then(res => {
             console.log(res)

@@ -4,7 +4,6 @@ import config from './config'
 App({
     globalData: {
         userInfo: null,
-        userId: 9527,
     },
     onLaunch() {
         qcloud.setLoginUrl(config.loginUrl)
