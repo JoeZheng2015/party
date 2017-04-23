@@ -19,3 +19,4 @@ export const request = (method = 'GET') => (url, data = {}, options = {}) => {
 
 export const GET = request('GET')
 export const POST = request('POST')
+export const DELETE = request('DELETE')

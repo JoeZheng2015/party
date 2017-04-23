@@ -59,7 +59,7 @@
     background: url('../../images/female.png') no-repeat center center;
 }*/
 
-.Detail__join {
+.Detail__btn {
     position: fixed;
     bottom: 0;
     left: 0;

@@ -1,4 +1,4 @@
-import {GET, POST} from '../utils/request'
+import {GET, POST, DELETE} from '../utils/request'
 import {API} from '../utils/constants'
 
 export const fetchParty = (id) => GET(
@@ -8,4 +8,8 @@ export const fetchParty = (id) => GET(
 export const joinParty = (id, data) => POST(
     `${API}/parties/${id}`,
     data,
+)
+
+export const quitParty = (partyId) => DELETE(
+    `${API}/parties/${partyId}`,
 )
