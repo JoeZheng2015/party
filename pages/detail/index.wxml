@@ -18,7 +18,12 @@
                 </image>
             </view>
     </view>
-    <button type="primary" class="Detail__btn" bindtap="submit">
+    <button
+    type="primary"
+    class="Detail__btn"
+    bindtap="submit"
+    longtap="deleteParty"
+    >
         {{hasJoined ? '退出' : '参加'}}
     </button>
 </view>

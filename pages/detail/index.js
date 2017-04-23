@@ -1,5 +1,5 @@
 import {API} from '../../utils/constants'
-import {fetchParty, joinParty, quitParty} from '../../actions/detail'
+import {fetchParty, joinParty, quitParty, deleteParty} from '../../actions/detail'
 import {processParty} from 'helper'
 import Session from '../../libs/sdk/lib/session'
 
@@ -44,7 +44,7 @@ Page({
             })
     },
     quitParty() {
-        quitParty(this.partyId)
+        quitParty(this.partyId, {quit: true})
             .then(res => {
                 if (res && res.ret === 0) {
                     this.setData({
@@ -52,5 +52,15 @@ Page({
                     })
                 }
             })
-    }
+    },
+    deleteParty() {
+        deleteParty(this.partyId)
+            .then(res => {
+                if (res && res.ret === 0) {
+                    wx.navigateTo({
+                        url: '/pages/index/index'
+                    })
+                }
+            })
+    },
 })
