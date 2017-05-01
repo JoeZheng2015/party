@@ -21,8 +21,7 @@
     <button
     type="primary"
     class="Detail__btn"
-    bindtap="submit"
-    longtap="deleteParty"
+    bindtap="updateParty"
     >
         {{hasJoined ? '退出' : '参加'}}
     </button>

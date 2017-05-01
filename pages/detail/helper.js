@@ -7,3 +7,5 @@ export const processParty = (party) => {
 
     return party
 }
+
+export const isHasJoined = (userId, players) => players.findIndex(p => p.userId === userId) !== -1

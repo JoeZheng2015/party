@@ -1,6 +1,6 @@
 import {API} from '../../utils/constants'
 import {fetchParty, joinParty, quitParty, deleteParty} from '../../actions/detail'
-import {processParty} from 'helper'
+import {processParty, isHasJoined} from 'helper'
 import Session from '../../libs/sdk/lib/session'
 
 const app = getApp()
@@ -16,18 +16,24 @@ Page({
 
         fetchParty(partyId)
             .then(party => {
-                const hasJoined = party.players.findIndex(p => p.userId === userId) !== -1
-
                 this.setData({
                     party: processParty(party),
-                    hasJoined,
+                    hasJoined: isHasJoined(userId, party.players),
                 })
             })
     },
-    submit(e) {
+    updateParty() {
         const {hasJoined} = this.data
         if (hasJoined) {
-            this.quitParty()
+            wx.showModal({
+                title: '确认退出聚会？',
+                showCancel: true,
+                success: ({confirm}) => {
+                    if (confirm) {
+                        this.quitParty()
+                    }
+                }
+            })
         }
         else {
             this.joinParty()
@@ -36,19 +42,23 @@ Page({
     joinParty() {
         joinParty(this.partyId, app.globalData.userInfo)
             .then(res => {
+                const {id: userId} = Session.get()
                 if (res && res.ret === 0) {
                     this.setData({
-                        party: res.party
+                        party: processParty(res.party),
+                        hasJoined: isHasJoined(userId, res.party.players),
                     })
                 }
             })
     },
     quitParty() {
-        quitParty(this.partyId, {quit: true})
+        const {id: userId} = Session.get()
+        quitParty(this.partyId)
             .then(res => {
                 if (res && res.ret === 0) {
                     this.setData({
-                        party: res.party,
+                        party: processParty(res.party),
+                        hasJoined: isHasJoined(userId, res.party.players),
                     })
                 }
             })
@@ -58,7 +68,7 @@ Page({
             title: '确认删除聚会？',
             content: '请谨慎操作，删除后无法恢复',
             showCancel: true,
-            success: ({confirm, cancel}) => {
+            success: ({confirm}) => {
                 if (confirm) {
                     deleteParty(this.partyId)
                         .then(res => {

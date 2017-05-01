@@ -10,7 +10,7 @@ export const joinParty = (id, data) => POST(
     data,
 )
 
-export const quitParty = (partyId, data) => DELETE(
+export const quitParty = (partyId, data) => POST(
     `${API}/parties/${partyId}`,
     data,
 )
