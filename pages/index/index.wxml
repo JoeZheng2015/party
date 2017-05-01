@@ -1,5 +1,5 @@
 <view class="Parties">
-    <view class="Parties__items">
+    <view class="Parties__items" wx:if="{{parties.length}}">
         <navigator
             hover-class="none"
             url="/pages/detail/index?id={{item._id}}"
@@ -15,6 +15,9 @@
                 <view class="Parties__location">{{item.location}}</view>
             </view>
         </navigator>
+    </view>
+    <view class="Parties__items--empty" wx:else>
+        发起一场聚会，和你的小伙伴聚起来吧~
     </view>
     <navigator
         hover-class="none"

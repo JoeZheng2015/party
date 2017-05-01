@@ -54,13 +54,22 @@ Page({
             })
     },
     deleteParty() {
-        deleteParty(this.partyId)
-            .then(res => {
-                if (res && res.ret === 0) {
-                    wx.navigateTo({
-                        url: '/pages/index/index'
-                    })
+        wx.showModal({
+            title: '确认删除聚会？',
+            content: '请谨慎操作，删除后无法恢复',
+            showCancel: true,
+            success: ({confirm, cancel}) => {
+                if (confirm) {
+                    deleteParty(this.partyId)
+                        .then(res => {
+                            if (res && res.ret === 0) {
+                                wx.navigateTo({
+                                    url: '/pages/index/index'
+                                })
+                            }
+                        })
                 }
-            })
+            }
+        })
     },
 })
