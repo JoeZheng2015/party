@@ -1,3 +1,4 @@
+@import './style/font.wxss';
 
 .main--color {
     color: #1AAD19;

@@ -58,7 +58,16 @@
     position: fixed;
     bottom: 30rpx;
     left: 50%;
-    margin-left: -48rpx;
+    margin-left: -48rpx;  
+}
+
+.Parties__button::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48rpx;
 }
 
 .Parties__clear {
@@ -67,15 +76,4 @@
     transform: rotate(45deg);
     background-color: #1AAD19;
     border-radius: 100%;
-}
-
-.Parties__button:after {
-    content: "";
-    background: url('../../images/plus.png') no-repeat center center;
-    width: 66rpx;
-    height: 66rpx;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

@@ -21,6 +21,6 @@
     </view>
     <navigator
         hover-class="none"
-        class="Parties__button main--bgcolor"
+        class="Parties__button icon--plus main--bgcolor"
         url="/pages/edit/index"></navigator>
 </view>
