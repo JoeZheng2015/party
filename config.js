@@ -1,8 +1,8 @@
-export const API = 'http://127.0.0.1:443'
+export const API = 'https://28718514.qcloud.la'
 
 const config = {
     API,
-    loginUrl: `http://${API}/login`,
+    loginUrl: `${API}/login`,
 }
 
 
