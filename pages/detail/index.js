@@ -1,4 +1,4 @@
-import {API} from '../../utils/constants'
+import {API} from '../../config'
 import {fetchParty, joinParty, quitParty, deleteParty} from '../../actions/detail'
 import {processParty, isHasJoined} from 'helper'
 import Session from '../../libs/sdk/lib/session'

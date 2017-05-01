@@ -1,5 +1,5 @@
 import {GET} from '../utils/request'
-import {API} from '../utils/constants'
+import {API} from '../config'
 
 export const fetchParties = (data = {}) => GET(
     `${API}/parties`,

@@ -1,4 +1,4 @@
-import {API} from '../../utils/constants'
+import {API} from '../../config'
 import {formatTime} from '../../utils/util'
 import {fetchParties} from '../../actions/index'
 import {processParties} from 'helper'

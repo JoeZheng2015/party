@@ -1,8 +1,8 @@
-const host = 'localhost:8080'
+export const API = 'http://127.0.0.1:443'
 
 const config = {
-    host,
-    loginUrl: `http://${host}/login`,
+    API,
+    loginUrl: `http://${API}/login`,
 }
 
 

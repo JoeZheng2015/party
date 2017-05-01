@@ -1,5 +1,5 @@
 import {formatNumber} from '../../utils/util'
-import {API} from '../../utils/constants'
+import {API} from '../../config'
 
 const now = new Date()
 const year = formatNumber(now.getFullYear())
