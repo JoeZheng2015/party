@@ -22,6 +22,12 @@ Page({
                 })
             })
     },
+    onShareAppMessage() {
+        return {
+            title: `${app.globalData.userInfo.nickName}邀请你参加聚会`,
+            path: `/pages/detail/index?id=${this.partyId}`,
+        }
+    },
     updateParty() {
         const {hasJoined} = this.data
         if (hasJoined) {
