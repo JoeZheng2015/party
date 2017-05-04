@@ -1,21 +1,7 @@
 import qcloud from '../libs/sdk/index'
-export const request = (method = 'GET') => (url, data = {}, options = {}) => {
+import {request, setRequestFunc} from './wx-promise-request'
 
-    return new Promise((resolve, reject) => {
-        qcloud.request({
-            url,
-            login: true,
-            data,
-            method,
-            success(res) {
-                resolve(res.data)
-            },
-            fail(err) {
-                reject(err)
-            }
-        })
-    })
-}
+setRequestFunc(qcloud.request)
 
 export const GET = request('GET')
 export const POST = request('POST')
