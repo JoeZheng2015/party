@@ -5,12 +5,12 @@ export function formatNumber(n) {
 
 export function formatTime(date) {
     const year = date.getFullYear()
-    const month = date.getMonth() + 1
-    const day = date.getDate()
+    const month = formatNumber(date.getMonth() + 1)
+    const day = formatNumber(date.getDate())
 
-    const hour = date.getHours()
-    const minute = date.getMinutes()
-    const second = date.getSeconds()
+    const hour = formatNumber(date.getHours())
+    const minute = formatNumber(date.getMinutes())
+    const second = formatNumber(date.getSeconds())
 
     return {
         year,
