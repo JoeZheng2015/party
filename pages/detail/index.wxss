@@ -64,4 +64,10 @@
     line-height: 90rpx;
     border-radius: 0;
 }
+.Detail__share {
+    text-align: center;
+    padding: 20rpx 0;
+    color: #666;
+    font-size: 28rpx;
+}
 

@@ -18,6 +18,7 @@
                 <view class="Detail__gender {{item.gender === 1 ? 'icon--male' : (item.gender === 2 ? 'icon--female' : '')}}"></view>
             </view>
     </view>
+    <view class="Detail__share">点击右上角可以转发给好友哦</view>
     <button
     type="primary"
     class="Detail__btn"
