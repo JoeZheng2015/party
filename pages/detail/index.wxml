@@ -4,7 +4,10 @@
             {{party.title}}
             <view class="Detail__delete icon--delete" bindtap="deleteParty"></view>
         </view>
-        <view class="Detail__time">时间：{{party.time}}</view>
+        <view class="Detail__time">
+            时间：{{party._time}}
+            <block wx:if="{{restTime}}">(还有<view class="Detail__restTime">{{restTime}}</view>)</block>
+        </view>
         <view class="Detail__location">地点：{{party.location}}</view>
         <view class="Detail__amount">已有 {{party.players.length}} 人参加</view>
     </view>

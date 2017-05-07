@@ -14,9 +14,11 @@
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .Detail__delete {
     font-size: 38rpx;
+    line-height: 38rpx;
     color: #666;
 }
 
@@ -26,6 +28,10 @@
     font-size: 30rpx;
     line-height: 40rpx;
     padding-bottom: 20rpx;
+}
+.Detail__restTime {
+    display: inline;
+    color: red;
 }
 
 .Detail__player {

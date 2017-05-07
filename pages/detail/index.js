@@ -1,6 +1,6 @@
 import {API} from '../../config'
 import {fetchParty, joinParty, quitParty, deleteParty} from '../../actions/detail'
-import {processParty, isHasJoined} from 'helper'
+import {processParty, isHasJoined, getRestTime} from 'helper'
 import Session from '../../libs/sdk/lib/session'
 
 const app = getApp()
@@ -9,6 +9,7 @@ Page({
     data: {
         party: null,
         hasJoined: false,
+        restTime: '',
     },
     onLoad(query) {
         const partyId = this.partyId = query.id
@@ -19,6 +20,7 @@ Page({
                 this.setData({
                     party: processParty(party),
                     hasJoined: isHasJoined(userId, party.players),
+                    restTime: getRestTime(party.time),
                 })
             })
     },
