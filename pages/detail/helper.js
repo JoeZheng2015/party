@@ -19,10 +19,9 @@ export const getRestTime = (end = Date.now(), now = Date.now()) => {
     ]
     const transformedTime = times.map(time => {
         const {text, unit} = time
-
         const number = ~~(ms / unit)
-        return number > 0 ? `${number}${text}` : ''
+        return number > 0 ? {number, text}: null
     })
 
-    return transformedTime.find(str => !!str)
+    return transformedTime.find(time => !!time)
 }

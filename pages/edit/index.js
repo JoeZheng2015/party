@@ -1,5 +1,7 @@
 import {formatNumber} from '../../utils/util'
 import {API} from '../../config'
+import {getDate} from './helper'
+import {getRestTime} from '../detail/helper'
 
 const now = new Date()
 const year = formatNumber(now.getFullYear())
@@ -19,24 +21,31 @@ Page({
         day,
         hour,
         minute,
+        restTime: null,
     },
     onLoad() {
     },
     bindDateChange(e) {
+        const {hour, minute} = this.data
         const value = e.detail.value
         const [year, month, day] = value.split('-')
+        const end = +getDate({year, month, day, hour, minute})
         this.setData({
             year,
             month,
             day,
+            restTime: getRestTime(end)
         })
     },
     bindTimeChange(e) {
+        const {year, month, day} = this.data
         const value = e.detail.value
         const [hour, minute] = value.split(':')
+        const end = +getDate({year, month, day, hour, minute})
         this.setData({
             hour,
             minute,
+            restTime: getRestTime(end),
         })
     },
     formSubmit(e) {
@@ -44,7 +53,7 @@ Page({
         const {title, location} = value
         const {year, month, day, hour, minute} = this.data
 
-        const time = +new Date(+year, month - 1, +day, +hour, +minute)
+        const time = +getDate({year, month, day, hour, minute})
 
         addParty({
             title,

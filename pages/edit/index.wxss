@@ -34,3 +34,12 @@
 .Edit__picker {
     margin-top: 32rpx;
 }
+.Edit__rest {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    color: #666;
+}
+.Edit__restTime {
+    display: inline-block;
+    color: red;
+}

@@ -19,5 +19,7 @@
     bindchange="bindTimeChange">
         <view class="Edit__pickerText">时间: {{hour}}:{{minute}}</view>
     </picker>
+    <view class="Edit__rest" wx:if="{{restTime}}">（距开始还有<view class="Edit__restTime">{{restTime.number}}</view>{{restTime.text}}）</view>
+    <view class="Edit__rest" wx:else>（聚会将马上开始）</view>
     <button class="Edit__button main--bgcolor" formType="submit">确定</button>
 </form>
