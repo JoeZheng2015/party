@@ -29,8 +29,10 @@
 }
 .icon--male:before {
   content: "\e901";
+  color: #66b3e9;
 }
 .icon--female:before {
   content: "\e902";
+  color: #e78278;
 }
 

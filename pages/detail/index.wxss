@@ -40,25 +40,14 @@
     padding-left: 23rpx;
     font-size: 28rpx;
     color: #333;
+    display: flex;
+    align-items: center;
 }
 
 .Detail__gender {
-    width: 28rpx;
-    height: 28rpx;
-    vertical-align:text-top;
+    font-size: 32rpx;
+    margin-left: 12rpx;
 }
-
-/*.Detail__nickname--male:after {
-    content: "";
-    background: url('../../images/male.png') no-repeat center center;
-    height: 28rpx;
-}
-
-.Detail__nickname--female:after {
-    content: "";
-    background: url('../../images/female.png') no-repeat center center;
-}*/
-
 .Detail__btn {
     position: fixed;
     bottom: 0;
