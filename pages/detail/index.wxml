@@ -12,7 +12,7 @@
             <image class="Detail__avatar" src="{{item.avatarUrl}}"></image>
             <view class="Detail__nickname">
                 {{item.nickName}}
-                <view class="Detail__gender {{item.gender === 1 ? 'icon--male' : 'icon--female'}}"></view>
+                <view class="Detail__gender {{item.gender === 1 ? 'icon--male' : (item.gender === 2 ? 'icon--female' : '')}}"></view>
             </view>
     </view>
     <button
