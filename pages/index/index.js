@@ -9,8 +9,13 @@ Page({
         parties: [],
     },
     onLoad() {
+        wx.showLoading({
+            title: '加载中...',
+            mask: true,
+        })
         fetchParties()
             .then(parties => {
+                wx.hideLoading()
                 this.setData({
                     parties: processParties(parties),
                 })
