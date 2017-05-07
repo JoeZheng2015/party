@@ -33,7 +33,7 @@ Page({
     },
     bindTimeChange(e) {
         const value = e.detail.value
-        const [hour, minute] = value.split('-')
+        const [hour, minute] = value.split(':')
         this.setData({
             hour,
             minute,
