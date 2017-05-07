@@ -6,7 +6,7 @@
         </view>
         <view class="Detail__time">
             时间：{{party._time}}
-            <block wx:if="{{restTime}}">(还有<view class="Detail__restTime">{{restTime}}</view>)</block>
+            <block wx:if="{{restTime}}">(还有<view class="Detail__restTime">{{restTime.number}}</view>{{restTime.text}})</block>
         </view>
         <view class="Detail__location">地点：{{party.location}}</view>
         <view class="Detail__amount">已有 {{party.players.length}} 人参加</view>

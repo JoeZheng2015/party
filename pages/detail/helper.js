@@ -15,7 +15,7 @@ export const getRestTime = (end = Date.now(), now = Date.now()) => {
     const times = [
         {text: '天', unit: 1000 * 60 * 60 * 24},
         {text: '小时', unit: 1000 * 60 * 60},
-        {text: '分', unit: 1000 * 60}
+        {text: '分钟', unit: 1000 * 60}
     ]
     const transformedTime = times.map(time => {
         const {text, unit} = time
