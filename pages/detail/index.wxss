@@ -12,6 +12,12 @@
     font-size: 56rpx;
     line-height: 68rpx;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.Detail__delete {
+    font-size: 38rpx;
+    color: #666;
 }
 
 .Detail__time,

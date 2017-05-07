@@ -35,4 +35,7 @@
   content: "\e902";
   color: #e78278;
 }
+.icon--delete:before {
+  content: "\e903";
+}
 
