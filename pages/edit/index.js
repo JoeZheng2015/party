@@ -1,4 +1,4 @@
-import {formatNumber} from '../../utils/util'
+import {formatNumber, navigateBackTo} from '../../utils/util'
 import {API} from '../../config'
 import {getDate} from './helper'
 import {getRestTime} from '../detail/helper'
@@ -64,9 +64,7 @@ Page({
         .then(res => {
             console.log(res)
             if (res && res.ret === 0) {
-                wx.redirectTo({
-                    url: '../index/index',
-                })
+                navigateBackTo('index')
             }
         })
     },
