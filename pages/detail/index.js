@@ -2,6 +2,7 @@ import {API} from '../../config'
 import {fetchParty, joinParty, quitParty, deleteParty} from '../../actions/detail'
 import {processParty, isHasJoined, getRestTime} from 'helper'
 import Session from '../../libs/sdk/lib/session'
+import {navigateBackTo} from '../../utils/util'
 
 const app = getApp()
 
@@ -81,9 +82,7 @@ Page({
                     deleteParty(this.partyId)
                         .then(res => {
                             if (res && res.ret === 0) {
-                                wx.navigateTo({
-                                    url: '/pages/index/index'
-                                })
+                                navigateBackTo('index')
                             }
                         })
                 }

@@ -8,7 +8,7 @@ Page({
     data: {
         parties: [],
     },
-    onLoad() {
+    onShow() {
         wx.showLoading({
             title: '加载中...',
             mask: true,
